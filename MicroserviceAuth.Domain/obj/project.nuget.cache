@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "BO7Q4Ar4NM5KkBAsnxcoDZL9AphwIMKcAy/OWCO36M3s1AvJueDtS30C+QJGbL1rdGrdqU+rF0zihGUZBXk6yw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ellis\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\ellis\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\ellis\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
+    "C:\\Users\\ellis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
