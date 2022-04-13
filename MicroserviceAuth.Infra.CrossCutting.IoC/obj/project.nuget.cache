@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9v5ccP6K4SgpDPi8YOygFnmBfK6qzEZ1bBaSN9OQ8kW4zWZFbK/E3L+yp6ZJ1W6Pr8iwhXdMXCagpZZS80Nptg==",
+  "dgSpecHash": "D0GoUARBQSi1LAp1EFyB2sowKdaD7f1XV1cNOO9qLA9O27ZbolaqimoyPr+2ijynMVEsmWIz57LDHvAXjyEf1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.CrossCutting.IoC\\MicroserviceAuth.Infra.CrossCutting.IoC.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ellis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

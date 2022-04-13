@@ -736,6 +736,9 @@
       "MicroserviceAuth.Infra.CrossCutting.IoC/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
         "compile": {
           "bin/placeholder/MicroserviceAuth.Infra.CrossCutting.IoC.dll": {}
         },

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CpgZiwZrDJOLtmKBoYWE8j1S5lSYtsh2lVKXWUOwFeK5f+XT1Dnuw8wovt5qXl770JEJGzORhoN86psX+jkKnA==",
+  "dgSpecHash": "Fhoi/87eMXJRhhu1Kjy11xxiPBHMPGuGZFLIXg5oAO/zGeBHahBPJD383oiDPjCE3Ip9OasfmPLA6ko4RwsIXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.Data\\MicroserviceAuth.Infra.Data.csproj",
   "expectedPackageFiles": [

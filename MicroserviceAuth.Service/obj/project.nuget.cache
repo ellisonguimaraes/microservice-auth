@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5yrhO8wCs7egtubqaSriqPZtmmYqj5rjgNMt/GZAIH+3u+XXycLhm76YjQ8f3LSa5mJZeB1d3Y3KUmgmWxFOLg==",
+  "dgSpecHash": "zeF5JeH2oJQX0JRP/FkrEkbtb0wlZIhw4AuBgmJGIkN6q6Pu7XjWAsnLtMZR3s0ozwt2DCx6tdjdUIbjwQf7sA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Service\\MicroserviceAuth.Service.csproj",
   "expectedPackageFiles": [

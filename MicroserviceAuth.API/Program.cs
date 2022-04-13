@@ -1,4 +1,5 @@
 using MicroserviceAuth.API.Configurations;
+using MicroserviceAuth.Infra.CrossCutting.IoC;
 using MicroserviceAuth.Infra.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,14 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Swagger Configuration
+// Swagger Configuration.
 builder.Services.AddSwaggerConfiguration();
 
-// Database Configuration
+// Database Configuration.
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetConnectionString("AuthDbConnectionString"));
 
-// Identity Configuration
+// Identity Configuration.
 builder.Services.AddIdentityConfiguration(builder.Configuration);
+
+// Dependency Injector.
+builder.Services.RegisterServices();
 
 var app = builder.Build();
 
