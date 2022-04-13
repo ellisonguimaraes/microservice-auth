@@ -10,3 +10,5 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\refint\MicroserviceAuth.Domain.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\ref\MicroserviceAuth.Domain.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\bin\Debug\net6.0\MicroserviceAuth.Domain.xml
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.xml

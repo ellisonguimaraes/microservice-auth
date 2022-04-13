@@ -22,14 +22,14 @@ namespace MicroserviceAuth.Infra.CrossCutting.IoC {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ResourceMessages {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ResourceMessages() {
+        internal Resource() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace MicroserviceAuth.Infra.CrossCutting.IoC {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MicroserviceAuth.Infra.CrossCutting.IoC.ResourceMessages", typeof(ResourceMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MicroserviceAuth.Infra.CrossCutting.IoC.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,11 @@ namespace MicroserviceAuth.Infra.CrossCutting.IoC {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Erro padrão.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a AuthDbConnectionString.
         /// </summary>
-        public static string Error {
+        public static string ConnectionStringName {
             get {
-                return ResourceManager.GetString("Error", resourceCulture);
+                return ResourceManager.GetString("ConnectionStringName", resourceCulture);
             }
         }
         
@@ -75,6 +75,15 @@ namespace MicroserviceAuth.Infra.CrossCutting.IoC {
         public static string Error2 {
             get {
                 return ResourceManager.GetString("Error2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a MicroservicesAuth.Domain.xml.
+        /// </summary>
+        public static string XMLFileNameDomain {
+            get {
+                return ResourceManager.GetString("XMLFileNameDomain", resourceCulture);
             }
         }
     }
