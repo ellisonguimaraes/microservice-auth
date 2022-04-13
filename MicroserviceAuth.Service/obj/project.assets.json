@@ -760,6 +760,7 @@
         "dependencies": {
           "MicroserviceAuth.Domain": "1.0.0",
           "MicroserviceAuth.Infra.CrossCutting.IoC": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3"
         },
         "compile": {

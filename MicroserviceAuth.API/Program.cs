@@ -1,13 +1,19 @@
-using MicroserviceAuth.Infra.CrossCutting.IoC;
+using MicroserviceAuth.API.Configurations;
+using MicroserviceAuth.Infra.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// Swagger Configuration
+builder.Services.AddSwaggerConfiguration();
+
+// Database Configuration
+builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetConnectionString("AuthDbConnectionString"));
+
+// Identity Configuration
+builder.Services.AddIdentityConfiguration(builder.Configuration);
 
 var app = builder.Build();
 
@@ -15,9 +21,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.RoutePrefix = String.Empty;
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Auth API v1");
+    });
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

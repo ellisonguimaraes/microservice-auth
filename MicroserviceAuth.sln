@@ -1,27 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAuth.API", "MicroserviceAuth.API\MicroserviceAuth.API.csproj", "{17053B22-9DA0-4207-851D-F77DF0A3F743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAuth.API", "MicroserviceAuth.API\MicroserviceAuth.API.csproj", "{17053B22-9DA0-4207-851D-F77DF0A3F743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAuth.Domain", "MicroserviceAuth.Domain\MicroserviceAuth.Domain.csproj", "{4E911281-2F6F-4E8A-B148-41F135164C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAuth.Domain", "MicroserviceAuth.Domain\MicroserviceAuth.Domain.csproj", "{4E911281-2F6F-4E8A-B148-41F135164C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAuth.Infra.CrossCutting.IoC", "MicroserviceAuth.Infra.CrossCutting.IoC\MicroserviceAuth.Infra.CrossCutting.IoC.csproj", "{2E7E13DE-347E-416B-8D6C-953F5225829E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAuth.Infra.CrossCutting.IoC", "MicroserviceAuth.Infra.CrossCutting.IoC\MicroserviceAuth.Infra.CrossCutting.IoC.csproj", "{2E7E13DE-347E-416B-8D6C-953F5225829E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAuth.Infra.Data", "MicroserviceAuth.Infra.Data\MicroserviceAuth.Infra.Data.csproj", "{9D3D741F-6423-488D-80EF-92243421329C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAuth.Infra.Data", "MicroserviceAuth.Infra.Data\MicroserviceAuth.Infra.Data.csproj", "{9D3D741F-6423-488D-80EF-92243421329C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAuth.Service", "MicroserviceAuth.Service\MicroserviceAuth.Service.csproj", "{68184109-9126-4C12-8BFD-D5C3D101FC71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAuth.Service", "MicroserviceAuth.Service\MicroserviceAuth.Service.csproj", "{68184109-9126-4C12-8BFD-D5C3D101FC71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAuth.Test", "MicroserviceAuth.Test\MicroserviceAuth.Test.csproj", "{D360501E-E855-4345-9D3E-9D7AABA61829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAuth.Test", "MicroserviceAuth.Test\MicroserviceAuth.Test.csproj", "{D360501E-E855-4345-9D3E-9D7AABA61829}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{155464A6-15B9-44AB-B66B-B5EB50149F45}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{17053B22-9DA0-4207-851D-F77DF0A3F743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,5 +50,11 @@ Global
 		{D360501E-E855-4345-9D3E-9D7AABA61829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D360501E-E855-4345-9D3E-9D7AABA61829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D360501E-E855-4345-9D3E-9D7AABA61829}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F965DCF1-51FD-4D03-9168-140BE6D19F9C}
 	EndGlobalSection
 EndGlobal

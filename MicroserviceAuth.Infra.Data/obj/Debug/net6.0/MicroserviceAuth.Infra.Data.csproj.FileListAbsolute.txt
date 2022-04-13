@@ -17,3 +17,4 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.Data\bin\Debug\n
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.Data\bin\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.Data\obj\Debug\net6.0\MicroserviceAuth.Infra.Data.csproj.CopyComplete
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.Data\obj\Debug\net6.0\MicroserviceAuth.Infra.Data.genruntimeconfig.cache
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.Data\bin\Debug\net6.0\MicroserviceAuth.Domain.xml
