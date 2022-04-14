@@ -11,10 +11,8 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\obj\Debug\net6
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\obj\Debug\net6.0\MicroserviceAuth.Service.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\obj\Debug\net6.0\ref\MicroserviceAuth.Service.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Domain.dll
-C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Infra.Data.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Domain.pdb
-C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Infra.Data.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\obj\Debug\net6.0\MicroserviceAuth.Service.csproj.CopyComplete
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Service\bin\Debug\net6.0\MicroserviceAuth.Domain.xml

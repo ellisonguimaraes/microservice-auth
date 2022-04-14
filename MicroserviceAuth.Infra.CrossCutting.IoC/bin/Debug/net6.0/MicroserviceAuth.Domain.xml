@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicroserviceAuth.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:MicroserviceAuth.Domain.Identity.RoleSettings">
+            <summary>
+            Available roles in the system
+            </summary>
+        </member>
+        <member name="T:MicroserviceAuth.Domain.Identity.User">
+            <summary>
+            IdentityUser extensions
+            </summary>
+        </member>
+    </members>
+</doc>
