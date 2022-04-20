@@ -6,7 +6,7 @@ public abstract class BaseEntity
 
     public DateTime CreatedAt { get; set; }
 
-    public string EditedBy { get; set; }
+    public string? EditedBy { get; set; }
 
-    public DateTime EditedAt { get; set; }
+    public DateTime? EditedAt { get; set; }
 }

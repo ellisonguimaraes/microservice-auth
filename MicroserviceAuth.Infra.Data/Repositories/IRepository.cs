@@ -1,10 +1,11 @@
 ﻿using FluentResults;
+using MicroserviceAuth.Domain.Pagination;
 
 namespace MicroserviceAuth.Infra.Data.Repositories;
 
 public interface IRepository<TEntity>
 {
-    public Task<List<TEntity>> GetAllAsync();
+    public Result<PagedList<TEntity>> GetPaginate(PaginationParameters paginationParameters);
 
     public Task<Result<TEntity>> GetByIdAsync(Guid id);
 

@@ -14,6 +14,12 @@ public static class IdentityConfiguration
         // Identity settings
         services.AddIdentity<User, IdentityRole>(options =>
         {
+            options.Lockout = new LockoutOptions
+            {
+                AllowedForNewUsers = true,
+                DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10),
+                MaxFailedAccessAttempts = 3
+            };
             options.SignIn.RequireConfirmedEmail = true;
             options.User.RequireUniqueEmail = true;
             options.Password.RequireNonAlphanumeric = true;

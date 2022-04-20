@@ -18,7 +18,7 @@ public static class SwaggerConfiguration
                 Description = "Auth API from Universidade Estadual de Santa Cruz (UESC)",
                 Contact = new OpenApiContact
                 {
-                    Name = "Ellison W. M. Guimar�es",
+                    Name = "Ellison W. M. Guimaraes",
                     Email = "ellison.guimaraes@gmail.com",
                     Url = new Uri("https://www.linkedin.com/in/ellisonguimaraes/")
                 }

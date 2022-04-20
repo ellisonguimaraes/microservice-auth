@@ -16,7 +16,10 @@ builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetCon
 // Identity Configuration.
 builder.Services.AddIdentityConfiguration(builder.Configuration);
 
-// Serilog Configuration
+// AutoMapper Configuration
+builder.Services.AddAutoMapperConfiguration();
+
+// Serilog Configuration.
 builder.AddSerilogConfiguration();
 
 // Dependency Injector.

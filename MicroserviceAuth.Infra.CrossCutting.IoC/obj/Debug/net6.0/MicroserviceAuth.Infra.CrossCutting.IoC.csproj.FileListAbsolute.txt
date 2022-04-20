@@ -16,3 +16,5 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Domain.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Domain.xml
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.csproj.CopyComplete
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Service.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Service.pdb

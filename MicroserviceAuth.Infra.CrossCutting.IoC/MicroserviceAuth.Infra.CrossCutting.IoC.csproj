@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MicroserviceAuth.Domain\MicroserviceAuth.Domain.csproj" />
     <ProjectReference Include="..\MicroserviceAuth.Infra.Data\MicroserviceAuth.Infra.Data.csproj" />
+    <ProjectReference Include="..\MicroserviceAuth.Service\MicroserviceAuth.Service.csproj" />
   </ItemGroup>
 
 </Project>

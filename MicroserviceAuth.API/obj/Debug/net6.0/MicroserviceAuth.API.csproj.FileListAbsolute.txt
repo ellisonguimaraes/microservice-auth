@@ -14,7 +14,6 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\M
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\MicroserviceAuth.API.AssemblyInfoInputs.cache
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\MicroserviceAuth.API.AssemblyInfo.cs
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\MicroserviceAuth.API.csproj.CoreCompileInputs.cache
-C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\MicroserviceAuth.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\MicroserviceAuth.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\staticwebassets.development.json
@@ -101,3 +100,6 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\bin\Debug\net6.0\S
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\bin\Debug\net6.0\Serilog.Sinks.File.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\bin\Debug\net6.0\Serilog.Sinks.MSSqlServer.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.API\obj\Debug\net6.0\MicroserviceAuth.API.MvcApplicationPartsAssemblyInfo.cs

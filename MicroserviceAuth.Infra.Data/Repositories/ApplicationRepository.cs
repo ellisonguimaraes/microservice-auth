@@ -1,5 +1,6 @@
 ﻿using FluentResults;
 using MicroserviceAuth.Domain.Application;
+using MicroserviceAuth.Domain.Pagination;
 using MicroserviceAuth.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -19,19 +20,29 @@ public class ApplicationRepository : IRepository<Application>
         _logger = logger;
     }
 
-    public async Task<List<Application>> GetAllAsync()
+    public Result<PagedList<Application>> GetPaginate(PaginationParameters paginationParameters)
     {
-        return await _applicationDbContext.Applications
+        try
+        {
+            var applications = _applicationDbContext.Applications
             .Include(a => a.ApplicationUsers).ThenInclude(au => au.User)
-            .OrderBy(a => a.ApplicationName)
-            .ToListAsync();
+            .OrderBy(a => a.Id);
+
+            return Result.Ok(new PagedList<Application>(applications, paginationParameters.PageSize, paginationParameters.PageNumber));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error getting application");
+            return Result.Fail(ex.Message);
+        }
     }
 
     public async Task<Result<Application>> GetByIdAsync(Guid id)
     {
         var entity = await _applicationDbContext.Applications
+            .Include(a => a.ApplicationUsers).ThenInclude(au => au.User)
             .Where(a => a.Id.Equals(id))
-            .SingleOrDefaultAsync();
+            .FirstOrDefaultAsync();
 
         if (entity == null)
         {
@@ -52,7 +63,7 @@ public class ApplicationRepository : IRepository<Application>
         catch (Exception ex)
         {
             _logger.LogError(ex, JsonSerializer.Serialize(entity));
-            return Result.Fail("Could not save Application into database");
+            return Result.Fail(ex.Message);
         }
     }
 
@@ -68,19 +79,19 @@ public class ApplicationRepository : IRepository<Application>
         try
         {
             getEntity.ApplicationName = entity.ApplicationName ?? getEntity.ApplicationName;
-            getEntity.ApiKey = entity.ApiKey ?? getEntity.ApiKey;
+            getEntity.ApiKey = entity.ApiKey;
             getEntity.EditedAt = DateTime.UtcNow;
             getEntity.EditedBy = entity.EditedBy ?? getEntity.EditedBy;
 
             _applicationDbContext.Applications.Update(getEntity);
             await _applicationDbContext.SaveChangesAsync();
 
-            return Result.Ok(entity);
+            return Result.Ok(getEntity);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, JsonSerializer.Serialize(entity));
-            return Result.Fail("Could not update Application into database");
+            return Result.Fail(ex.Message);
         }
     }
 
@@ -103,7 +114,7 @@ public class ApplicationRepository : IRepository<Application>
         catch (Exception ex)
         {
             _logger.LogError(ex, JsonSerializer.Serialize(getEntity));
-            return Result.Fail("Could not delete Application into database");
+            return Result.Fail(ex.Message);
         }
     }
 }

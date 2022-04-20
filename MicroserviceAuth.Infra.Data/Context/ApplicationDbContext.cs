@@ -18,11 +18,7 @@ public class ApplicationDbContext : IdentityDbContext<User>
     }
 
     protected override void OnModelCreating(ModelBuilder builder)
-    {
-        //builder.ApplyConfiguration(new UserConfiguration());
-        //builder.ApplyConfiguration(new ApplicationConfiguration());
-        //builder.ApplyConfiguration(new ApplicationUserConfiguration());
-
+    { 
         new UserConfiguration().Configure(builder.Entity<User>());
         new ApplicationConfiguration().Configure(builder.Entity<Application>());
         new ApplicationUserConfiguration().Configure(builder.Entity<ApplicationUser>());
