@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MicroserviceAuth.Domain.Application;
+using Microsoft.AspNetCore.Identity;
 
 namespace MicroserviceAuth.Domain.Identity;
 
@@ -14,4 +15,7 @@ public class User : IdentityUser
     public string EditedBy { get; set; }
 
     public DateTime EditedAt { get; set; }
+
+    // Relationship
+    public virtual List<ApplicationUser> ApplicationUsers { get; set; }
 }

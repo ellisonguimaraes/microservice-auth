@@ -1,19 +1,31 @@
 using MicroserviceAuth.API.Configurations;
+using MicroserviceAuth.API.Middlewares;
+using MicroserviceAuth.Infra.CrossCutting.IoC;
 using MicroserviceAuth.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Swagger Configuration
+// Swagger Configuration.
 builder.Services.AddSwaggerConfiguration();
 
-// Database Configuration
+// Database Configuration.
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetConnectionString("AuthDbConnectionString"));
 
-// Identity Configuration
+// Identity Configuration.
 builder.Services.AddIdentityConfiguration(builder.Configuration);
+
+// AutoMapper Configuration
+builder.Services.AddAutoMapperConfiguration();
+
+// Serilog Configuration.
+builder.AddSerilogConfiguration();
+
+// Dependency Injector.
+builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -30,6 +42,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseMiddleware<ApiKeyMiddleware>();
 
 app.MapControllers();
 

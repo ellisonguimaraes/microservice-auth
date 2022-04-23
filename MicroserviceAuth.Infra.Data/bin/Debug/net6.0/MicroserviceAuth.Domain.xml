@@ -4,6 +4,145 @@
         <name>MicroserviceAuth.Domain</name>
     </assembly>
     <members>
+        <member name="T:MicroserviceAuth.Domain.ApplicationInfo">
+            <summary>
+            App settings application info
+            </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationRequest.Id">
+            <summary>
+            Application id
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationRequest.ApplicationName">
+            <summary>
+            Application unique name
+            </summary>
+            <example>egressprogram</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationRequest.ApiKey">
+            <summary>
+            Api key identifier
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationResponse.Id">
+            <summary>
+            Application id
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationResponse.ApplicationName">
+            <summary>
+            Application unique name
+            </summary>
+            <example>egressprogram</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationResponse.ApiKey">
+            <summary>
+            Api key identifier
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationResponse.Users">
+            <summary>
+            Users into application
+            </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.BaseResponse.CreatedBy">
+            <summary>
+            Who added the application
+            </summary>
+            <example>egressprogram</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.BaseResponse.CreatedAt">
+            <summary>
+            When you added the application
+            </summary>
+            <example>2022-04-16T02:33:49.491Z</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.BaseResponse.EditedBy">
+            <summary>
+            Who updated the application
+            </summary>
+            <example>egressprogram</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.BaseResponse.EditedAt">
+            <summary>
+            When you updated the application
+            </summary>
+            <example>2022-04-16T02:33:49.491Z</example>
+        </member>
+        <member name="T:MicroserviceAuth.Domain.DTO.GenericResponse`1">
+            <summary>
+            Generic response body model
+            </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse`1.TraceId">
+            <summary>
+            Trace id
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse`1.StatusCode">
+            <summary>
+            Status codes
+            </summary>
+            <example>200</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse`1.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse`1.Errors">
+             <summary>
+             Errors list
+             </summary>
+             <example>
+             [
+                 "error message 1",
+                 "error message 2",
+                 "error message N"
+             ]
+            </example>
+        </member>
+        <member name="T:MicroserviceAuth.Domain.DTO.GenericResponse">
+            <summary>
+            Response body model
+            </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.TraceId">
+            <summary>
+            Trace id
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.StatusCode">
+            <summary>
+            Status codes
+            </summary>
+            <example>200</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.Data">
+            <summary>
+            Data
+            </summary>
+            <example>null</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.Errors">
+             <summary>
+             Errors list
+             </summary>
+             <example>
+             [
+                 "error message 1",
+                 "error message 2",
+                 "error message N"
+             ]
+            </example>
+        </member>
         <member name="T:MicroserviceAuth.Domain.Identity.RoleSettings">
             <summary>
             Available roles in the system
@@ -13,6 +152,18 @@
             <summary>
             IdentityUser extensions
             </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.Pagination.PaginationParameters.PageNumber">
+            <summary>
+            Page number
+            </summary>
+            <example>2</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.Pagination.PaginationParameters.PageSize">
+            <summary>
+            Page size
+            </summary>
+            <example>10</example>
         </member>
     </members>
 </doc>

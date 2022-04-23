@@ -7,18 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Resource.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\MicroserviceAuth.Domain\MicroserviceAuth.Domain.csproj" />
+    <ProjectReference Include="..\MicroserviceAuth.Infra.Data\MicroserviceAuth.Infra.Data.csproj" />
+    <ProjectReference Include="..\MicroserviceAuth.Service\MicroserviceAuth.Service.csproj" />
   </ItemGroup>
 
 </Project>

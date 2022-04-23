@@ -50,6 +50,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -59,6 +63,38 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Enrichers.ClientInfo": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[5.7.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -123,6 +159,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[10.4.0, )"
@@ -170,7 +210,17 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj": {
+                "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj"
+              },
+              "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.Data\\MicroserviceAuth.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.Data\\MicroserviceAuth.Infra.Data.csproj"
+              },
+              "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Service\\MicroserviceAuth.Service.csproj": {
+                "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Service\\MicroserviceAuth.Service.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -182,6 +232,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -227,9 +287,6 @@
             "projectReferences": {
               "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj": {
                 "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj"
-              },
-              "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.CrossCutting.IoC\\MicroserviceAuth.Infra.CrossCutting.IoC.csproj": {
-                "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.CrossCutting.IoC\\MicroserviceAuth.Infra.CrossCutting.IoC.csproj"
               }
             }
           }
@@ -244,6 +301,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -257,6 +318,38 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Enrichers.ClientInfo": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[5.7.0, )"
             }
           },
           "imports": [
@@ -305,9 +398,6 @@
               "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj": {
                 "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Domain\\MicroserviceAuth.Domain.csproj"
               },
-              "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.CrossCutting.IoC\\MicroserviceAuth.Infra.CrossCutting.IoC.csproj": {
-                "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.CrossCutting.IoC\\MicroserviceAuth.Infra.CrossCutting.IoC.csproj"
-              },
               "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.Data\\MicroserviceAuth.Infra.Data.csproj": {
                 "projectPath": "C:\\Users\\ellis\\Desktop\\microservice-auth\\MicroserviceAuth.Infra.Data\\MicroserviceAuth.Infra.Data.csproj"
               }
@@ -324,6 +414,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -335,6 +433,38 @@
             "RestEase": {
               "target": "Package",
               "version": "[1.5.5, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Enrichers.ClientInfo": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[5.7.0, )"
             }
           },
           "imports": [

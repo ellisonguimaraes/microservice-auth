@@ -10,5 +10,11 @@ C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\refint\MicroserviceAuth.Infra.CrossCutting.IoC.dll
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.pdb
 C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\ref\MicroserviceAuth.Infra.CrossCutting.IoC.dll
-C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.csproj.GenerateResource.cache
-C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.Resource.resources
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Domain.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Infra.Data.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Infra.Data.pdb
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Domain.pdb
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Domain.xml
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\obj\Debug\net6.0\MicroserviceAuth.Infra.CrossCutting.IoC.csproj.CopyComplete
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Service.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Infra.CrossCutting.IoC\bin\Debug\net6.0\MicroserviceAuth.Service.pdb
