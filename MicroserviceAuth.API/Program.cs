@@ -1,6 +1,8 @@
 using MicroserviceAuth.API.Configurations;
+using MicroserviceAuth.API.Middlewares;
 using MicroserviceAuth.Infra.CrossCutting.IoC;
 using MicroserviceAuth.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +25,7 @@ builder.Services.AddAutoMapperConfiguration();
 builder.AddSerilogConfiguration();
 
 // Dependency Injector.
-builder.Services.RegisterServices();
+builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -40,6 +42,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseMiddleware<ApiKeyMiddleware>();
 
 app.MapControllers();
 

@@ -8,11 +8,11 @@ namespace MicroserviceAuth.Service.Application;
 
 public class ApplicationServices : IApplicationServices
 {
-    private readonly IRepository<Domain.Application.Application> _applicationRepository;
+    private readonly IApplicationRepository _applicationRepository;
 
     private readonly IMapper _mapper;
 
-    public ApplicationServices(IRepository<Domain.Application.Application> applicationRepository, IMapper mapper)
+    public ApplicationServices(IApplicationRepository applicationRepository, IMapper mapper)
     {
         _applicationRepository = applicationRepository;
         _mapper = mapper;
@@ -143,5 +143,23 @@ public class ApplicationServices : IApplicationServices
         var applicationResponse = _mapper.Map<ApplicationResponse>(result.Value);
 
         return Result.Ok(applicationResponse);
+    }
+
+    /// <summary>
+    /// Validate Apikey by ApplicationName
+    /// </summary>
+    /// <param name="applicationName">Application unique name</param>
+    /// <param name="apiKeyReceived">Apikey received</param>
+    /// <returns>True or false</returns>
+    public async Task<bool> ValidateApiKeyByAppNameAsync(string applicationName, string apiKeyReceived)
+    {
+        var result = await _applicationRepository.GetByApplicationNameAsync(applicationName);
+
+        if (result.IsFailed || !result.Value.ApiKey.Equals(apiKeyReceived))
+        {
+            return false;
+        }
+
+        return true;
     }
 }

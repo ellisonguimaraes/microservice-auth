@@ -1,4 +1,5 @@
-﻿using MicroserviceAuth.Domain.DTO;
+﻿using FluentValidation;
+using MicroserviceAuth.Domain.DTO;
 using MicroserviceAuth.Domain.DTO.Application;
 using MicroserviceAuth.Domain.Pagination;
 using MicroserviceAuth.Service.Application;
@@ -11,11 +12,36 @@ namespace MicroserviceAuth.API.Controllers;
 [Route("api/[controller]")]
 public class ApplicationController : ControllerBase
 {
-    public readonly IApplicationServices _applicationServices;
+    private readonly IApplicationServices _applicationServices;
 
-    public ApplicationController(IApplicationServices applicationServices)
+    private readonly IValidator<ApplicationRequest> _applicationRequestValidator;
+
+    public ApplicationController(IApplicationServices applicationServices, IValidator<ApplicationRequest> applicationRequestValidator)
     {
         _applicationServices = applicationServices;
+        _applicationRequestValidator = applicationRequestValidator;
+    }
+
+    /// <summary>
+    /// Validate ApiKey by ApplicationName
+    /// </summary>
+    /// <param name="applicationName">Application unique name</param>
+    /// <param name="apiKeyReceived">Apikey received</param>
+    /// <returns>NoContent or BadRequest</returns>
+    /// <response code="204">Apikey is valid</response>
+    /// <response code="400">Apikey is invalid</response>
+    [HttpPost]
+    [Route("validate/{ApplicationName}/{ApiKeyReceived}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(GenericResponse))]
+    public async Task<IActionResult> ValidateAsync([FromRoute(Name = "ApplicationName")] string applicationName, [FromRoute(Name = "ApiKeyReceived")] string apiKeyReceived)
+    {
+        if (!await _applicationServices.ValidateApiKeyByAppNameAsync(applicationName, apiKeyReceived))
+        {
+            return BadRequest(new GenericResponse(StatusCodes.Status400BadRequest, "ApiKey is invalid"));
+        }
+
+        return NoContent();
     }
 
     /// <summary>
@@ -111,6 +137,13 @@ public class ApplicationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(GenericResponse<ApplicationResponse>))]
     public async Task<IActionResult> UpdateAsync([FromBody] ApplicationRequest applicationRequest)
     {
+        var validationResult = _applicationRequestValidator.Validate(applicationRequest);
+
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(new GenericResponse<ApplicationResponse>(StatusCodes.Status400BadRequest, null, validationResult.Errors.Select(e => e.ErrorMessage).ToList()));
+        }
+
         var result = await _applicationServices.UpdateAsync(applicationRequest);
 
         if (result.IsFailed)

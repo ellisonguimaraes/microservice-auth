@@ -4,6 +4,11 @@
         <name>MicroserviceAuth.Domain</name>
     </assembly>
     <members>
+        <member name="T:MicroserviceAuth.Domain.ApplicationInfo">
+            <summary>
+            App settings application info
+            </summary>
+        </member>
         <member name="P:MicroserviceAuth.Domain.DTO.Application.ApplicationRequest.Id">
             <summary>
             Application id
@@ -90,15 +95,43 @@
             <summary>
             Data
             </summary>
-            <example>
-            {
-                "attribute1": "value 1",
-                "attribute2": "value 2",
-                "attributeN": "value N"
-            }
-            </example>
         </member>
         <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse`1.Errors">
+             <summary>
+             Errors list
+             </summary>
+             <example>
+             [
+                 "error message 1",
+                 "error message 2",
+                 "error message N"
+             ]
+            </example>
+        </member>
+        <member name="T:MicroserviceAuth.Domain.DTO.GenericResponse">
+            <summary>
+            Response body model
+            </summary>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.TraceId">
+            <summary>
+            Trace id
+            </summary>
+            <example>dce6aa57-64c6-4fc0-97a2-73083373d290</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.StatusCode">
+            <summary>
+            Status codes
+            </summary>
+            <example>200</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.Data">
+            <summary>
+            Data
+            </summary>
+            <example>null</example>
+        </member>
+        <member name="P:MicroserviceAuth.Domain.DTO.GenericResponse.Errors">
              <summary>
              Errors list
              </summary>

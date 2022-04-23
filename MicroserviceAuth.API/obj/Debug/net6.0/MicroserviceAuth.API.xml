@@ -4,6 +4,16 @@
         <name>MicroserviceAuth.API</name>
     </assembly>
     <members>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.ValidateAsync(System.String,System.String)">
+            <summary>
+            Validate ApiKey by ApplicationName
+            </summary>
+            <param name="applicationName">Application unique name</param>
+            <param name="apiKeyReceived">Apikey received</param>
+            <returns>NoContent or BadRequest</returns>
+            <response code="204">Apikey is valid</response>
+            <response code="400">Apikey is invalid</response>
+        </member>
         <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.GetPaginate(MicroserviceAuth.Domain.Pagination.PaginationParameters)">
             <summary>
             Get pagination data
@@ -48,6 +58,11 @@
             <returns>NoContent or GenericResponse error</returns>
             <response code="200">Application deleted</response>
             <response code="400">An error has occurred</response>
+        </member>
+        <member name="T:MicroserviceAuth.API.Extensions.SwaggerExtensions">
+            <summary>
+            Swagger UI Extensions
+            </summary>
         </member>
     </members>
 </doc>

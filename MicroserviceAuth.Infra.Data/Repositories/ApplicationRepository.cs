@@ -8,7 +8,7 @@ using System.Text.Json;
 
 namespace MicroserviceAuth.Infra.Data.Repositories;
 
-public class ApplicationRepository : IRepository<Application>
+public class ApplicationRepository : IApplicationRepository
 {
     private readonly ApplicationDbContext _applicationDbContext;
 
@@ -32,8 +32,8 @@ public class ApplicationRepository : IRepository<Application>
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error getting application");
-            return Result.Fail(ex.Message);
+            _logger.LogError(ex, "Error getting applications");
+            return Result.Fail("Error getting applications");
         }
     }
 
@@ -63,7 +63,7 @@ public class ApplicationRepository : IRepository<Application>
         catch (Exception ex)
         {
             _logger.LogError(ex, JsonSerializer.Serialize(entity));
-            return Result.Fail(ex.Message);
+            return Result.Fail("Error creating application");
         }
     }
 
@@ -79,7 +79,7 @@ public class ApplicationRepository : IRepository<Application>
         try
         {
             getEntity.ApplicationName = entity.ApplicationName ?? getEntity.ApplicationName;
-            getEntity.ApiKey = entity.ApiKey;
+            getEntity.ApiKey = entity.ApiKey ?? getEntity.ApiKey;
             getEntity.EditedAt = DateTime.UtcNow;
             getEntity.EditedBy = entity.EditedBy ?? getEntity.EditedBy;
 
@@ -91,7 +91,7 @@ public class ApplicationRepository : IRepository<Application>
         catch (Exception ex)
         {
             _logger.LogError(ex, JsonSerializer.Serialize(entity));
-            return Result.Fail(ex.Message);
+            return Result.Fail("Error updating application");
         }
     }
 
@@ -114,7 +114,37 @@ public class ApplicationRepository : IRepository<Application>
         catch (Exception ex)
         {
             _logger.LogError(ex, JsonSerializer.Serialize(getEntity));
-            return Result.Fail(ex.Message);
+            return Result.Fail("Error removing application");
         }
+    }
+
+    public async Task<Result<Application>> GetByApplicationNameAsync(string applicationName)
+    {
+        var entity = await _applicationDbContext.Applications
+            .Include(a => a.ApplicationUsers).ThenInclude(au => au.User)
+            .Where(a => a.ApplicationName.Equals(applicationName))
+            .FirstOrDefaultAsync();
+
+        if (entity == null)
+        {
+            return Result.Fail("Application not found");
+        }
+
+        return Result.Ok(entity);
+    }
+
+    public async Task<Result<Application>> GetByApiKeyAsync(string apiKey)
+    {
+        var entity = await _applicationDbContext.Applications
+            .Include(a => a.ApplicationUsers).ThenInclude(au => au.User)
+            .Where(a => a.ApiKey.Equals(apiKey))
+            .FirstOrDefaultAsync();
+
+        if (entity == null)
+        {
+            return Result.Fail("Application not found");
+        }
+
+        return Result.Ok(entity);
     }
 }

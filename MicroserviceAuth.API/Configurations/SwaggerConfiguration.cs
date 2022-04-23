@@ -1,4 +1,5 @@
-﻿using MicroserviceAuth.Infra.CrossCutting.IoC;
+﻿using MicroserviceAuth.API.Extensions;
+using MicroserviceAuth.Infra.CrossCutting.IoC;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -23,6 +24,8 @@ public static class SwaggerConfiguration
                     Url = new Uri("https://www.linkedin.com/in/ellisonguimaraes/")
                 }
             });
+
+            options.OperationFilter<SwaggerExtensions>();
 
             // Configure Authentication Support in Swagger Page
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

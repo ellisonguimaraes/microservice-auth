@@ -11,4 +11,5 @@ public interface IApplicationServices
     public Task<Result<ApplicationResponse>> CreateAsync(string applicationName);
     Task<Result<ApplicationResponse>> UpdateAsync(ApplicationRequest applicationRequest);
     public Task<Result<ApplicationResponse>> DeleteAsync(Guid id);
+    public Task<bool> ValidateApiKeyByAppNameAsync(string applicationName, string apiKeyReceived);
 }
