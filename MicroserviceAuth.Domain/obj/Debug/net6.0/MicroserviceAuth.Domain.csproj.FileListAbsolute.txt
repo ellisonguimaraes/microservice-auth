@@ -1,0 +1,14 @@
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\bin\Debug\net6.0\MicroserviceAuth.Domain.deps.json
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\bin\Debug\net6.0\MicroserviceAuth.Domain.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\bin\Debug\net6.0\MicroserviceAuth.Domain.pdb
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.csproj.AssemblyReference.cache
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.AssemblyInfoInputs.cache
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.AssemblyInfo.cs
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\refint\MicroserviceAuth.Domain.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.pdb
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\ref\MicroserviceAuth.Domain.dll
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\bin\Debug\net6.0\MicroserviceAuth.Domain.xml
+C:\Users\ellis\Desktop\microservice-auth\MicroserviceAuth.Domain\obj\Debug\net6.0\MicroserviceAuth.Domain.xml

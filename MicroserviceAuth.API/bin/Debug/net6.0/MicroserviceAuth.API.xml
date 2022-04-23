@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicroserviceAuth.API</name>
+    </assembly>
+    <members>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.ValidateAsync(System.String,System.String)">
+            <summary>
+            Validate ApiKey by ApplicationName
+            </summary>
+            <param name="applicationName">Application unique name</param>
+            <param name="apiKeyReceived">Apikey received</param>
+            <returns>NoContent or BadRequest</returns>
+            <response code="204">Apikey is valid</response>
+            <response code="400">Apikey is invalid</response>
+        </member>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.GetPaginate(MicroserviceAuth.Domain.Pagination.PaginationParameters)">
+            <summary>
+            Get pagination data
+            </summary>
+            <param name="paginationParameters">Page size and Page number</param>
+            <returns>Applications paged list</returns>
+            <response code="200">Successfully obtained</response>
+            <response code="400">An error has occurred</response>
+        </member>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.GetByIdAsync(System.Guid)">
+            <summary>
+            Get application by id
+            </summary>
+            <param name="id" >Application id</param>
+            <returns>Application</returns>
+            <response code="200">Successfully obtained</response>
+            <response code="404">Application not found</response>
+        </member>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.PostAsync(System.String)">
+            <summary>
+            Create new application
+            </summary>
+            <param name="applicationName">Application unique name</param>
+            <returns>Application created</returns>
+            <response code="201">Application created</response>
+            <response code="400">An error has occurred</response>
+        </member>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.UpdateAsync(MicroserviceAuth.Domain.DTO.Application.ApplicationRequest)">
+            <summary>
+            Update application
+            </summary>
+            <param name="applicationRequest">Application id, Api key and name</param>
+            <returns>Application or GenericResponse error</returns>
+            <response code="200">Application updated</response>
+            <response code="400">An error has occurred</response>
+        </member>
+        <member name="M:MicroserviceAuth.API.Controllers.ApplicationController.DeleteAsync(System.Guid)">
+            <summary>
+            Delete application
+            </summary>
+            <param name="id">Application id</param>
+            <returns>NoContent or GenericResponse error</returns>
+            <response code="200">Application deleted</response>
+            <response code="400">An error has occurred</response>
+        </member>
+        <member name="T:MicroserviceAuth.API.Extensions.SwaggerExtensions">
+            <summary>
+            Swagger UI Extensions
+            </summary>
+        </member>
+    </members>
+</doc>
